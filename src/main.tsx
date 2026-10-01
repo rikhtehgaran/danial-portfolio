@@ -37,6 +37,8 @@ import {
 } from 'lucide-react'
 import './index.css'
 
+const asset = (path: string) => `${(import.meta as any).env?.BASE_URL || './'}${path.replace(/^\//, '')}`
+
 type FadeInProps = {
   children: React.ReactNode
   className?: string
@@ -280,7 +282,7 @@ function HeroSection() {
               
               <div className="relative overflow-hidden rounded-full border-2 border-white/40 p-1.5 bg-black/60 shadow-[0_12px_45px_rgba(182,0,168,0.4)]">
                 <img
-                  src="/danial-photo.png"
+                  src={asset('danial-photo.png')}
                   alt="Danial Rikhteh Garan"
                   className="h-auto w-[240px] sm:w-[310px] md:w-[360px] lg:w-[410px] rounded-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -334,7 +336,7 @@ function HeroSection() {
         
         <FadeIn delay={0.5} y={20} className="relative z-20 flex flex-wrap items-center gap-3">
           <ContactButton text="Connect With Me" href="#contact" />
-          <SecondaryButton text="Resume PDF" href="/Danial-Rikhteh-Garan-Resume.pdf" icon={Download} />
+          <SecondaryButton text="Resume PDF" href={asset('Danial-Rikhteh-Garan-Resume.pdf')} icon={Download} />
         </FadeIn>
       </div>
     </section>
@@ -684,9 +686,9 @@ const projects: Project[] = [
       'Integrated backtesting analytics and Sharpe ratio tracking',
     ],
     images: [
-      '/projects/algo-1.jpg',
-      '/projects/algo-2.jpg',
-      '/projects/algo-3.png',
+      asset('projects/algo-1.jpg'),
+      asset('projects/algo-2.jpg'),
+      asset('projects/algo-3.png'),
     ],
   },
   {
@@ -703,9 +705,9 @@ const projects: Project[] = [
       'Real-time automated revenue and attendance reports',
     ],
     images: [
-      '/projects/arta-1.png',
-      '/projects/arta-2.png',
-      '/projects/arta-3.png',
+      asset('projects/arta-1.png'),
+      asset('projects/arta-2.png'),
+      asset('projects/arta-3.png'),
     ],
   },
   {
@@ -722,9 +724,9 @@ const projects: Project[] = [
       'No client installation required -- fully bot and cloud powered',
     ],
     images: [
-      '/projects/vakil-1.png',
-      '/projects/vakil-2.png',
-      '/projects/vakil-3.png',
+      asset('projects/vakil-1.png'),
+      asset('projects/vakil-2.png'),
+      asset('projects/vakil-3.png'),
     ],
   },
   {
@@ -741,9 +743,9 @@ const projects: Project[] = [
       'Specialized educational community features',
     ],
     images: [
-      '/projects/dornash-1.png',
-      '/projects/dornash-2.png',
-      '/projects/dornash-3.png',
+      asset('projects/dornash-1.png'),
+      asset('projects/dornash-2.png'),
+      asset('projects/dornash-3.png'),
     ],
   },
   {
@@ -760,9 +762,9 @@ const projects: Project[] = [
       'Reduced phone coordination labor by over 80%',
     ],
     images: [
-      '/projects/nobat-1.png',
-      '/projects/nobat-2.png',
-      '/projects/nobat-3.png',
+      asset('projects/nobat-1.png'),
+      asset('projects/nobat-2.png'),
+      asset('projects/nobat-3.png'),
     ],
   },
   {
@@ -779,9 +781,9 @@ const projects: Project[] = [
       'Iran’s first bulk email marketing platform and Linux domain service (2012)',
     ],
     images: [
-      '/projects/parsimint-1.png',
-      '/projects/isfahan-1.png',
-      '/projects/isfahan-2.png',
+      asset('projects/parsimint-1.png'),
+      asset('projects/isfahan-1.png'),
+      asset('projects/isfahan-2.png'),
     ],
   },
 ]
@@ -1106,7 +1108,7 @@ function StartupsSection() {
             </div>
             <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
               <img
-                src="/projects/ericom-team.png"
+                src={asset('projects/ericom-team.png')}
                 alt="Ericom Software Group Team"
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               />
@@ -1151,25 +1153,25 @@ function HonorsSection() {
     {
       title: 'Astan Quds Razavi Commendation',
       detail: 'Virtual Pilgrimage 3D Interactive Software acknowledgement (2011)',
-      image: '/projects/award-2.png',
+      image: asset('projects/award-2.png'),
       tag: 'State Honor',
     },
     {
       title: 'Linux Research Week Honor',
       detail: 'Research week seminar recognition at MAU University (2011)',
-      image: '/projects/award-3.png',
+      image: asset('projects/award-3.png'),
       tag: 'Academic',
     },
     {
       title: 'National Linux Seminar Award',
       detail: 'Operating systems research and presentation commendation (2008)',
-      image: '/projects/award-1.png',
+      image: asset('projects/award-1.png'),
       tag: 'University',
     },
     {
       title: 'National Open-Source Conference',
       detail: 'Keynote and speaker covered nationally by ISNA news agency (2012)',
-      image: '/projects/isna-news.png',
+      image: asset('projects/isna-news.png'),
       tag: 'Keynote Speaker',
     },
   ]
@@ -1398,7 +1400,7 @@ function ContactSection() {
               <p className="text-xs text-zinc-400">Download detailed PDF resume including complete course syllabi & work history.</p>
             </div>
             <a
-              href="/Danial-Rikhteh-Garan-Resume.pdf"
+              href={asset('Danial-Rikhteh-Garan-Resume.pdf')}
               download="Danial-Rikhteh-Garan-Resume.pdf"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#B600A8] to-[#7621B0] px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white shadow-lg transition-transform hover:scale-105"
             >
