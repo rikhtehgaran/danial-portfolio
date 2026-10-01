@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  background: #0c0c0c;
+  color: #d7e2ea;
+  font-family: 'Plus Jakarta Sans', 'Kanit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+  background: #0c0c0c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  overflow-x: clip;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+/* Metallic chrome gradient heading matching original design */
+.hero-heading {
+  background: linear-gradient(180deg, #8a919e 0%, #d8e5ee 60%, #9cb1c0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-kanit {
+  font-family: 'Kanit', sans-serif;
+}
+
+/* Subtle glowing accent gradient */
+.accent-glow {
+  background: radial-gradient(circle, rgba(182, 0, 168, 0.25) 0%, rgba(118, 33, 177, 0.15) 50%, transparent 70%);
+}
+
+.glass-panel {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(215, 226, 234, 0.12);
+}
+
+.glass-card {
+  background: rgba(22, 22, 22, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(215, 226, 234, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(215, 226, 234, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(182, 0, 168, 0.2);
+}
+
+::selection {
+  background: rgba(182, 0, 168, 0.35);
+  color: #ffffff;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0c0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
